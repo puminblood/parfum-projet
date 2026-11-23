@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" fill="none">
+  <defs>
+    <linearGradient id="glass" x1="38" y1="42" x2="91" y2="111" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F9DDEB"/><stop offset="1" stop-color="#D8B8E4"/>
+    </linearGradient>
+    <linearGradient id="metal" x1="54" y1="12" x2="76" y2="39" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#E8C991"/><stop offset="1" stop-color="#B98258"/>
+    </linearGradient>
+  </defs>
+  <path d="M56 15h16v17H56z" fill="url(#metal)" stroke="#8D557D" stroke-width="3" stroke-linejoin="round"/>
+  <path d="M52 14h27a4 4 0 0 0 4-4v-1H48v1a4 4 0 0 0 4 4Z" fill="#D9B6C9" stroke="#8D557D" stroke-width="3" stroke-linejoin="round"/>
+  <path d="M64 32v8M50 40c0-4 3-7 7-7h14c6 0 8 4 8 8l8 9c3 3 5 7 5 12v35c0 9-7 16-16 16H52c-9 0-16-7-16-16V62c0-5 2-9 5-12l9-10Z" fill="url(#glass)" stroke="#8D557D" stroke-width="4" stroke-linejoin="round"/>
+  <path d="M45 58c7 4 31 4 39 0M47 96c0 7 5 12 12 12" stroke="#fff" stroke-width="4" stroke-linecap="round" opacity=".7"/>
+  <rect x="48" y="68" width="32" height="19" rx="7" fill="#FFF9FC" stroke="#C992B8" stroke-width="2"/>
+  <path d="M64 72.5c1.9 3.2 3.6 4.9 6.8 5.7-3.2.8-4.9 2.5-6.8 5.8-1.8-3.3-3.6-5-6.8-5.8 3.2-.8 5-2.5 6.8-5.7Z" fill="#B76893"/>
+  <path d="M99 36h8m-4-4v8M25 50h7m-3.5-3.5v7" stroke="#D3A354" stroke-width="3" stroke-linecap="round"/>
+  <path d="M98 73h5m-2.5-2.5v5" stroke="#D3A354" stroke-width="2.5" stroke-linecap="round"/>
+</svg>

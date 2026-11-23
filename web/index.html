@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#fbf6fa">
+  <link rel="icon" type="image/svg+xml" href="/perfume-logo.svg">
+  <title>Parfum · Carnet de projets</title>
+  <link rel="stylesheet" href="/styles.css">
+  <link rel="stylesheet" href="/utilities.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <a class="brand" href="#" aria-label="Parfum, accueil">
+        <span class="brand-mark"><img src="/perfume-logo.svg" alt=""></span>
+        <span class="brand-copy"><strong>parfum</strong><small>carnet de projets</small></span>
+      </a>
+      <div class="sidebar-label">ESPACE DE TRAVAIL</div>
+      <nav class="main-nav" aria-label="Navigation principale">
+        <button class="nav-item active" id="nav-overview" data-page="overview" type="button"><span class="nav-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="4" width="17" height="16" rx="4"/><path d="M8 2.8v3M16 2.8v3M3.5 9h17M8 13h2m4 0h2m-8 4h2m4 0h2"/></svg></span> Vue d’ensemble</button>
+        <button class="nav-item" id="nav-all" data-page="projects" type="button"><span class="nav-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="4"/><path d="M8 9h8M8 12h8M8 15h5"/></svg></span> Tous les projets <span class="nav-count" id="nav-count">0</span></button>
+      </nav>
+      <div class="sidebar-divider"></div>
+      <div class="sidebar-label">VOTRE SUIVI</div>
+      <nav class="main-nav" aria-label="Filtres rapides">
+        <button class="nav-item" data-quick-filter="in_progress" type="button"><span class="nav-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 7v5l3.5 2"/></svg></span> En cours</button>
+        <button class="nav-item" data-quick-filter="finished" type="button"><span class="nav-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="m8 12 2.5 2.5L16 9"/></svg></span> Terminés</button>
+      </nav>
+      <div class="sidebar-bottom">
+        <div class="sidebar-tip"><span class="tip-spark"><svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m12 3 2.2 5.8L20 11l-5.8 2.2L12 19l-2.2-5.8L4 11l5.8-2.2L12 3Z"/></svg></span><p>Une vue claire pour garder le cap, projet après projet.</p></div>
+        <div class="profile"><span class="avatar avatar-profile">É</span><span><strong>Mon espace</strong><small>Suivi personnel</small></span><span class="profile-dots">···</span></div>
+      </div>
+    </aside>
+
+    <main class="main-content">
+      <header class="topbar"><span class="mobile-brand"><img src="/perfume-logo.svg" alt="Parfum"></span><div class="breadcrumb">Mon espace <span>/</span> <span id="breadcrumb-page">Vue d’ensemble</span></div><div class="topbar-right"><span class="local-indicator"><i></i> Données locales</span><span class="topbar-date" id="today-label"></span></div></header>
+      <section class="page-intro"><div><div class="eyebrow"><span class="eyebrow-line"></span> VOTRE CARNET DE SUIVI</div><h1 id="page-title">Vue d’ensemble<span class="title-period">.</span></h1><p class="page-subtitle" id="page-subtitle">Vos échéances et vos prochaines actions, au même endroit.</p></div><button class="button button-primary" id="new-project"><span class="plus">+</span> Nouveau projet</button></section>
+
+      <section id="overview-page" class="page-view">
+        <section class="stats-grid" aria-label="Résumé des projets">
+          <article class="stat-card stat-main"><div class="stat-top"><span>Projets en cours</span><span class="stat-icon icon-sand"><svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 8.5 12 4l8 4.5v10a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 4 18.5v-10Z"/><path d="M9 20v-6h6v6M8 9.5h.01M12 9.5h.01M16 9.5h.01"/></svg></span></div><strong id="stat-active">0</strong><small>sur votre tableau</small></article>
+          <article class="stat-card"><div class="stat-top"><span>À surveiller</span><span class="stat-icon icon-rose"><svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 7v5l3.5 2"/></svg></span></div><strong id="stat-due">0</strong><small>en retard ou sous 7 jours</small></article>
+          <article class="stat-card"><div class="stat-top"><span>Terminés</span><span class="stat-icon icon-sage"><svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m12 3 2.2 2.2 3.1-.3.9 3 2.7 1.6-1.2 2.9 1.2 2.9-2.7 1.6-.9 3-3.1-.3L12 22l-2.2-2.2-3.1.3-.9-3-2.7-1.6 1.2-2.9-1.2-2.9L5.8 8l.9-3 3.1.3L12 3Z"/><path d="m8.5 12.2 2.3 2.3 4.8-5"/></svg></span></div><strong id="stat-finished">0</strong><small>toutes décisions confondues</small></article>
+        </section>
+        <section class="dashboard-section">
+          <div class="section-heading"><div><h2>Calendrier de la semaine</h2><p>Les projets en cours apparaissent à leur date limite.</p></div><button class="text-button" id="go-all" type="button">Voir tous les projets <span>→</span></button></div>
+          <section id="calendar-panel" class="calendar-panel" aria-label="Calendrier hebdomadaire">
+            <div class="calendar-toolbar"><button class="calendar-arrow" id="calendar-previous" type="button" aria-label="Semaine précédente"><svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m14.5 5-7 7 7 7"/></svg></button><div class="calendar-range"><strong id="calendar-range">Cette semaine</strong><button class="calendar-today hidden" id="calendar-today" type="button">Revenir à cette semaine</button></div><button class="calendar-arrow" id="calendar-next" type="button" aria-label="Semaine suivante"><svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m9.5 5 7 7-7 7"/></svg></button></div>
+            <div id="week-calendar" class="week-calendar"></div>
+            <p class="calendar-caption">Les projets apparaissent le jour de leur deadline. Cliquez sur un projet pour ouvrir sa fiche.</p>
+          </section>
+        </section>
+      </section>
+
+      <section id="projects-page" class="page-view hidden">
+        <section class="dashboard-section projects-section">
+          <div class="section-heading"><div><h2>Ensemble des projets</h2><p>Recherchez et filtrez votre suivi personnel.</p></div><button class="text-button" id="reset-filters" type="button">Réinitialiser les filtres <span>↗</span></button></div>
+          <div class="toolbar"><label class="search-box"><span class="search-icon"><svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.8"/><path d="m16 16 4.5 4.5"/></svg></span><input id="search" type="search" placeholder="Rechercher un projet, un client…" autocomplete="off"><kbd>⌘ K</kbd></label><div class="filter-group"><label class="select-wrap"><span class="filter-symbol"><svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16M7 12h10m-7 6h4"/></svg></span><select id="status-filter" aria-label="Filtrer par statut"><option value="all">Tous les statuts</option><option value="in_progress">En cours</option><option value="finished">Terminés</option></select><span class="select-caret">⌄</span></label><label class="select-wrap"><span class="decision-symbol"><svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m12 3 2.2 5.7L20 11l-5.8 2.2L12 19l-2.2-5.8L4 11l5.8-2.3L12 3Z"/></svg></span><select id="decision-filter" aria-label="Filtrer par décision"><option value="all">Toutes les décisions</option><option value="won">Gagné</option><option value="lost">Perdu</option><option value="pending">En attente</option></select><span class="select-caret">⌄</span></label></div></div>
+          <div class="results-line"><span id="result-count">0 projet</span><span class="results-separator">·</span><span id="result-context">Tous vos projets</span></div>
+          <div class="project-grid" id="project-grid" aria-live="polite"></div>
+          <div class="empty-state hidden" id="empty-state"><div class="empty-flower"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 14 9l6-2-4 5 4 5-6-2-2 6-2-6-6 2 4-5-4-5 6 2 2-6Z"/></svg></div><h3>Un espace à composer</h3><p>Ajoutez votre premier projet pour commencer à organiser votre suivi.</p><button class="button button-primary" id="empty-create"><span class="plus">+</span> Créer un projet</button></div>
+        </section>
+      </section>
+      <footer class="page-footer"><span>Un outil de suivi personnel, pensé pour votre pratique.</span><span>Enregistré sur cet appareil <i class="footer-dot"></i></span></footer>
+    </main>
+  </div>
+
+  <dialog class="modal project-modal" id="project-modal">
+    <form id="project-form" method="dialog">
+      <div class="modal-head"><div><div class="eyebrow"><span class="eyebrow-line"></span> FICHE PROJET</div><h2 id="project-modal-title">Nouveau projet</h2></div><button class="icon-button" type="button" data-close="project-modal" aria-label="Fermer">×</button></div>
+      <input type="hidden" id="project-id">
+      <div class="form-grid">
+        <label class="field" id="project-title-field"><span>Nom du projet <b>*</b></span><input id="project-title" required maxlength="240" placeholder="Ex. Collection printemps 2027"></label>
+        <label class="field"><span>Client / marque</span><input id="project-client" maxlength="240" placeholder="Nom du client"></label>
+        <label class="field"><span>Étape du projet</span><input id="project-stage-label" readonly value="Sélection"></label>
+        <label class="field"><span>Statut du projet</span><select id="project-status"><option value="in_progress">En cours</option><option value="finished">Terminé</option></select></label>
+        <label class="field"><span>Décision</span><select id="project-decision"><option value="pending">En attente</option><option value="won">Gagné</option><option value="lost">Perdu</option></select></label>
+        <label class="field"><span>Deadline</span><input id="project-deadline" type="date"></label>
+        <label class="field"><span>RMC · coût total du projet (€)</span><input id="project-rmc" type="number" min="0" max="9999999999.99" step="0.01" placeholder="Ex. 1250,00"></label>
+        <div class="field field-full contact-field"><span>Commercial</span><div class="token-input picker-wrap"><div class="token-list" id="people-commercial-tokens"></div><div class="token-entry"><input id="people-commercial-input" autocomplete="off" placeholder="Choisir ou ajouter le commercial…" aria-expanded="false" aria-controls="people-commercial-picker"><button type="button" class="add-token" data-add-person="commercial">Ajouter</button></div><div class="picker-menu person-picker hidden" id="people-commercial-picker" role="listbox" aria-label="Commerciaux enregistrés"></div></div><small>Associé au projet dès sa création.</small></div>
+        <div class="field field-full contact-field"><span>Assistant commercial</span><div class="token-input picker-wrap"><div class="token-list" id="people-assistant-commercial-tokens"></div><div class="token-entry"><input id="people-assistant-commercial-input" autocomplete="off" placeholder="Choisir ou ajouter l’assistant commercial…" aria-expanded="false" aria-controls="people-assistant-commercial-picker"><button type="button" class="add-token" data-add-person="assistant_commercial">Ajouter</button></div><div class="picker-menu person-picker hidden" id="people-assistant-commercial-picker" role="listbox" aria-label="Assistants commerciaux enregistrés"></div></div><small>Associé au projet dès sa création.</small></div>
+        <div class="field field-full contact-field"><span>Parfumeurs</span><div class="token-input picker-wrap"><div class="token-list" id="people-parfumeur-tokens"></div><div class="token-entry"><input id="people-parfumeur-input" autocomplete="off" placeholder="Ajouter un ou plusieurs parfumeurs…" aria-expanded="false" aria-controls="people-parfumeur-picker"><button type="button" class="add-token" data-add-person="parfumeur">Ajouter</button></div><div class="picker-menu person-picker hidden" id="people-parfumeur-picker" role="listbox" aria-label="Parfumeurs enregistrés"></div></div><small>Vous pouvez compléter cette équipe plus tard en modifiant un projet en cours.</small></div>
+        <div class="field field-full contact-field hidden" id="unclassified-people-field"><span>Intervenants existants à classer</span><div class="token-input"><div class="token-list" id="people-unclassified-tokens"></div></div><small>Pour attribuer un rôle, choisissez le contact dans l’un des trois champs ci-dessus. Cela mettra à jour son rôle pour les projets concernés.</small></div>
+        <div class="field field-full"><span>Références sélectionnées</span><div class="token-input picker-wrap"><div class="token-list" id="reference-tokens"></div><div class="token-entry"><input id="references-input" autocomplete="off" placeholder="Cliquer pour choisir ou saisir une référence…" aria-expanded="false" aria-controls="references-picker"><button type="button" class="add-token" data-add-token="references">Ajouter</button></div><div class="picker-menu hidden" id="references-picker" role="listbox" aria-label="Références déjà enregistrées"></div></div><small>Ajoutez une ou plusieurs références de produit.</small></div>
+        <label class="field field-full"><span>Résumé personnel</span><textarea id="project-brief" rows="3" maxlength="5000" placeholder="Quelques mots pour vous rappeler le contexte…"></textarea></label>
+      </div>
+      <div class="modal-actions"><button class="button button-quiet" type="button" data-close="project-modal">Annuler</button><button class="button button-primary" type="submit">Enregistrer le projet <span>→</span></button></div>
+    </form>
+  </dialog>
+
+  <dialog class="modal detail-modal" id="detail-modal"><div id="detail-content"></div></dialog>
+  <div class="toast" id="toast" role="status"></div>
+  <script src="/app.js" defer></script>
+</body>
+</html>
